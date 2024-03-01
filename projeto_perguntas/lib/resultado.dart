@@ -45,7 +45,7 @@ class Resultado extends StatelessWidget {
         ElevatedButton(
           onPressed: quandoRenicaiarQuiz,
           style: ElevatedButton.styleFrom(
-              primary: const Color.fromARGB(161, 106, 9, 101)),
+              backgroundColor: const Color.fromARGB(161, 106, 9, 101)),
           child: const Text(
             'Reiniciar?',
             style: TextStyle(

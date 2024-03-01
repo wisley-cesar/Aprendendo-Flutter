@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_perguntas/questionario.dart';
 import 'package:projeto_perguntas/resultado.dart';
-import './questao.dart';
-import './resposta.dart';
 
 void main() => runApp(PerguntasApp());
 
@@ -34,7 +32,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
         {'texto': 'Porsche 911 gt3 rs', 'pontuacao': 2},
         {'texto': 'Ferrari 488 pista', 'pontuacao': 1},
         {'texto': 'Lamborghini huracan', 'pontuacao': 10},
-        {'texto': 'Lamborghini aventador svj', 'pontuacao': 3},
+        {'texto': 'Lamborghini aventador svj', 'pontuacao': 3},code
       ],
     },
     {
