@@ -32,7 +32,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
         {'texto': 'Porsche 911 gt3 rs', 'pontuacao': 2},
         {'texto': 'Ferrari 488 pista', 'pontuacao': 1},
         {'texto': 'Lamborghini huracan', 'pontuacao': 10},
-        {'texto': 'Lamborghini aventador svj', 'pontuacao': 3},code
+        {'texto': 'Lamborghini aventador svj', 'pontuacao': 3},
       ],
     },
     {
