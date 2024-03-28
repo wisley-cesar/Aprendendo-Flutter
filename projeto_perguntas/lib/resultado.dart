@@ -7,25 +7,25 @@ class Resultado extends StatelessWidget {
 
   String get fraseResulatado {
     if (pontuacao < 8) {
-      return 'Você não Conhece Nada Do Wisley César';
+      return 'Você não Conhece Nada Do Wisley César \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 18) {
-      return 'Você conhece um pouco o Wisley César';
+      return 'Você conhece um pouco o Wisley César \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 25) {
-      return 'Legal você foi bem!';
+      return 'Legal você foi bem!\n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 35) {
-      return 'O você ta no caminho certo';
+      return 'O você ta no caminho certo\n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 45) {
-      return 'Rapaz, tu é bom';
+      return 'Rapaz, tu é bom \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 55) {
-      return ' Gigante!';
+      return ' Gigante! \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 65) {
-      return 'Tu sabe muito sobre o Wisley César';
+      return 'Tu sabe muito sobre o Wisley César \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao == 73) {
-      return 'Pontução secreta, você não ganhou mas foi quase!!';
+      return 'Pontução secreta, você não ganhou mas foi quase!! \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao < 75) {
-      return 'FOI QUASE!!! MAS UM POUCO TU GANHA O QUIZ!!!';
+      return 'FOI QUASE!!! MAS UM POUCO TU GANHA O QUIZ!!! \n Sua pontuação foi = ${pontuacao}';
     } else if (pontuacao == 80) {
-      return 'PARABÉNS VOCÊ CONHECE MUITO BEM O WISLEY CÉSAR VOCÊ ZEROU O JOGO!!';
+      return 'PARABÉNS VOCÊ CONHECE MUITO BEM O WISLEY CÉSAR VOCÊ ZEROU O JOGO!! \n Sua pontuação foi = ${pontuacao}';
     } else {
       return 'legal';
     }
