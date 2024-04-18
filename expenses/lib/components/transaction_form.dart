@@ -16,7 +16,16 @@ class _TransactionFormState extends State<TransactionForm> {
 
   _submitFrom() {
     final title = _titleControler.text;
-    final value = double.parse(_valueControler.text) ?? 0.0;
+    //  final value = double.parse(_valueControler.text) ?? 0.0;
+    final valueString = _valueControler.text.replaceAll(',', '.');
+    double value = 0.0;
+    try {
+      value = double.parse(valueString);
+    } catch (e) {
+      // Se não conseguir converter para double, define o valor como 0.0
+      value = 0.0;
+    }
+
     if (title.isEmpty || value <= 0) {
       return;
     }
