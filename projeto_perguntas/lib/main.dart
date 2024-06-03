@@ -110,9 +110,7 @@ class _PerguntasAppState extends State<PerguntasApp> {
 
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Perguntas'),
-        ),
+        appBar: AppBar(title: Text('Perguntas')),
         body: temPerguntaSelecionada
             ? Questionario(
                 perguntaSelecionada: _perguntaSelecionada,
@@ -130,7 +128,3 @@ class PerguntasApp extends StatefulWidget {
     return _PerguntasAppState();
   }
 }
-
-
-
-
