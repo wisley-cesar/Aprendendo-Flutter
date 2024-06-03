@@ -36,5 +36,4 @@ Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestõe
 Este projeto é licenciado sob a [MIT License](LICENSE).
 
 ---
-
 Obrigado por conferir meu projeto! Espero que você goste de usar Flutter tanto quanto eu.
