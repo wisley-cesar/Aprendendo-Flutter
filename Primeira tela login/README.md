@@ -1,20 +1,44 @@
-<<<<<<< HEAD
 # Primeira Tela de Login
-=======
-# Primeira Tela de login
->>>>>>> 2c52ae8 (Tela de login)
 
-A new Flutter project.
+Esta é minha primeira tela de login, desenvolvida com base nos conhecimentos que adquiri até o momento. Fiz todo o desenvolvimento sozinho, baseando-me na documentação oficial, sem seguir vídeos ou aulas específicas. Esta é apenas a primeira versão e pretendo aprimorá-la conforme adquiro mais conhecimento.
 
-## Getting Started
+## Introdução
 
-This project is a starting point for a Flutter application.
+Este projeto é um ponto de partida para uma aplicação Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+## Capturas de Tela
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Captura de Tela 2024-06-03 às 3 11 05 PM](https://github.com/wisley-cesar/Aprendendo-Flutter/assets/116464094/1b43065d-a396-4f2c-bea3-8ca31f554222)
+![Captura de Tela 2024-06-03 às 3 15 48 PM](https://github.com/wisley-cesar/Aprendendo-Flutter/assets/116464094/ab7ed636-7583-4aac-be9c-8eadd0b0dc46)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Recursos Úteis
+
+Aqui estão alguns recursos que podem ajudar você a começar, caso este seja seu primeiro projeto em Flutter:
+
+- [Lab: Escreva seu primeiro aplicativo Flutter](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Exemplos úteis de Flutter](https://docs.flutter.dev/cookbook)
+
+## Documentação
+
+Para obter ajuda sobre o desenvolvimento em Flutter, consulte a [documentação online](https://docs.flutter.dev/). Ela oferece tutoriais, exemplos, orientações sobre desenvolvimento móvel e uma referência completa da API.
+
+## Estrutura do Projeto
+
+Aqui está uma breve descrição da estrutura do projeto:
+
+- `lib/main.dart`: O ponto de entrada principal do aplicativo.
+- `pubspec.lock`: Arquivo de bloqueio de dependências gerado automaticamente.
+- `.DS_Store`: Arquivo do sistema macOS, geralmente deve ser ignorado.
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você encontrar problemas ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto é licenciado sob a [MIT License](LICENSE).
+
+---
+
+Obrigado por conferir meu projeto! Espero que você goste de usar Flutter tanto quanto eu.
