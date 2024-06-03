@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Primeira Tela de Login
+=======
+# Primeira Tela de login
+>>>>>>> 2c52ae8 (Tela de login)
 
 A new Flutter project.
 
