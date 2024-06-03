@@ -19,10 +19,6 @@ Aqui estão alguns recursos que podem ajudar você a começar, caso este seja se
 - [Lab: Escreva seu primeiro aplicativo Flutter](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Exemplos úteis de Flutter](https://docs.flutter.dev/cookbook)
 
-## Documentação
-
-Para obter ajuda sobre o desenvolvimento em Flutter, consulte a [documentação online](https://docs.flutter.dev/). Ela oferece tutoriais, exemplos, orientações sobre desenvolvimento móvel e uma referência completa da API.
-
 ## Estrutura do Projeto
 
 Aqui está uma breve descrição da estrutura do projeto:
