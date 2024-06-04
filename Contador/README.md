@@ -1,16 +1,7 @@
-# contdor
 
-A new Flutter project.
+# Contador 
+Este repositório apresenta um contador personalizado que aprimora o widget padrão do Flutter, utilizando os conhecimentos adquiridos durante a jornada de aprendizado.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Captura de Tela 2024-06-04 às 4 24 20 PM](https://github.com/wisley-cesar/Aprendendo-Flutter/assets/116464094/8b06db37-cdae-4c56-b214-535f6121874d)
+![Captura de Tela 2024-06-04 às 4 23 46 PM](https://github.com/wisley-cesar/Aprendendo-Flutter/assets/116464094/928f0dc7-c2bc-4bc0-ae44-f811800530ca)
