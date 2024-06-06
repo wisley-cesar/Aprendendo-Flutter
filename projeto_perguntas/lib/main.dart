@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:projeto_perguntas/questionario.dart';
 import 'package:projeto_perguntas/resultado.dart';
 
+
 void main() => runApp(PerguntasApp());
 
 class _PerguntasAppState extends State<PerguntasApp> {
