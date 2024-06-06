@@ -8,7 +8,7 @@ class Myhome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Login(),
-     
+      debugShowCheckedModeBanner: false,
     );
   }
 }
