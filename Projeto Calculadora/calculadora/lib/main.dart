@@ -1,4 +1,8 @@
-import 'package:calculadora/screens/calculdara.dart';
 import 'package:flutter/material.dart';
+import 'package:teste/screens/calculadora.dart';
 
-main() => runApp(MyApp());
+void main() {
+  runApp(const Calculadora());
+}
+
+
