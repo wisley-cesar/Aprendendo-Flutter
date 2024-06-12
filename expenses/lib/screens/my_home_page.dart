@@ -124,8 +124,8 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 height: avalableHeight *
                     (Platform.isIOS
-                        ? (isLandscape ? 1 : 1)
-                        : (isLandscape ? 1 : 0.60)),
+                        ? (isLandscape ? 0.80 : 1)
+                        : (isLandscape ? 0.96 : 0.60)),
                 child: TransactionList(_transactions, _removeTransaction),
               ),
           ],
