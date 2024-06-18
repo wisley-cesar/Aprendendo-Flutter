@@ -12,7 +12,6 @@ class TransactionForm extends StatefulWidget {
 
   @override
   State<TransactionForm> createState() {
-    print('CreateState TrasactionForm');
     return _TransactionFormState();
   }
 }
