@@ -1,26 +1,45 @@
 import 'dart:io';
 import 'dart:math';
-
-import 'package:expenses/components/chart.dart';
-import 'package:expenses/components/transaction_form.dart';
-import 'package:expenses/components/transaction_list.dart';
+import 'package:expenses/components/my_app_bar/app_bar_android.dart';
+import 'package:expenses/components/my_app_bar/app_bar_ios.dart';
+import 'package:expenses/components/body/body_page.dart';
+import 'package:expenses/components/transactions/transaction_form.dart';
 import 'package:expenses/models/transaction.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   final List<Transaction> _transactions = [];
   bool _showChart = false;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this);
+  }
 
   List<Transaction> get _recentTransactions {
     return _transactions.where((tr) {
       return tr.date.isAfter(DateTime.now().subtract(
-        Duration(days: 7),
+        const Duration(days: 7),
       ));
     }).toList();
   }
@@ -69,8 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final iconList = Platform.isIOS ? CupertinoIcons.list_bullet : Icons.list;
     final chartList =
         Platform.isIOS ? CupertinoIcons.graph_square_fill : Icons.show_chart;
-
-    final actions = [
+    final List<Widget> actions = [
       if (isLandscape)
         _getIconButton(
           _showChart ? iconList : chartList,
@@ -86,67 +104,40 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     ];
 
-    final appBar = Platform.isIOS
-        ? CupertinoNavigationBar(
-            middle: Text('Despesas Pessoais'),
-            trailing: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: actions,
-            ) //parse da classe
-            ) as PreferredSizeWidget
-        : AppBar(
-            title: Text(
-              'Despesas Pessoais',
-              style: TextStyle(
-                fontFamily: 'OpenSans',
-                fontSize: 20 * mediaQuery.textScaler.scale(1),
-              ),
-            ),
-            actions: actions,
-            backgroundColor: Theme.of(context).colorScheme.primary,
-          ) as PreferredSize;
+    final appBarIos =
+        MyAppBarIos(actions: actions) as ObstructingPreferredSizeWidget;
 
-    final avalableHeight = mediaQuery.size.height -
-        appBar.preferredSize.height -
+    final appBarAndroid =
+        MyAppBarAndroid(actions: actions) as PreferredSizeWidget;
+
+    final avalableHeightIos = mediaQuery.size.height -
+        appBarIos.preferredSize.height -
+        MediaQuery.of(context).padding.top;
+    final avalableHeightAndroid = mediaQuery.size.height -
+        appBarAndroid.preferredSize.height -
         MediaQuery.of(context).padding.top;
 
-    final bodyPage = SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            if (_showChart || !isLandscape)
-              Container(
-                height: avalableHeight * (isLandscape ? 0.8 : 0.30),
-                child: Chart(recentTransaction: _recentTransactions),
-              ),
-            if (!_showChart || !isLandscape)
-              Container(
-                height: avalableHeight *
-                    (Platform.isIOS
-                        ? (isLandscape ? 0.80 : 1)
-                        : (isLandscape ? 0.96 : 0.60)),
-                child: TransactionList(_transactions, _removeTransaction),
-              ),
-          ],
-        ),
-      ),
-    );
+    final bodyPage = MyBodyPage(
+        avalableHeight:
+            Platform.isIOS ? avalableHeightIos : avalableHeightAndroid,
+        transactions: _transactions,
+        recentTransactions: _recentTransactions,
+        removeTransaction: _removeTransaction);
 
     return Platform.isIOS
         ? CupertinoPageScaffold(
-            navigationBar: appBar as ObstructingPreferredSizeWidget,
+            navigationBar: appBarIos,
             child: bodyPage,
           )
         : Scaffold(
-            appBar: appBar,
+            appBar: appBarAndroid,
             body: bodyPage,
             floatingActionButton: Platform.isIOS
                 ? Container()
                 : FloatingActionButton(
-                    child: Icon(Icons.add),
                     onPressed: () => _opentransactionFormModal(context),
                     backgroundColor: Theme.of(context).colorScheme.secondary,
+                    child: const Icon(Icons.add),
                   ),
             floatingActionButtonLocation:
                 FloatingActionButtonLocation.centerFloat,
