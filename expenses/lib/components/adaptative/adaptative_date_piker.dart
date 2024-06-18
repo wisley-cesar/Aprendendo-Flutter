@@ -6,8 +6,8 @@ import 'package:intl/intl.dart';
 class AdaptativeDatePiker extends StatelessWidget {
   final DateTime selectedDate;
   final Function(DateTime) onDateChanged;
-  AdaptativeDatePiker(
-      {required this.selectedDate, required this.onDateChanged});
+  const AdaptativeDatePiker(
+      {super.key, required this.selectedDate, required this.onDateChanged});
 
   _showDatePicker(BuildContext context) {
     showDatePicker(
@@ -26,7 +26,7 @@ class AdaptativeDatePiker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Platform.isIOS
-        ? Container(
+        ? SizedBox(
             height: 180,
             child: CupertinoDatePicker(
               mode: CupertinoDatePickerMode.date,
@@ -36,7 +36,7 @@ class AdaptativeDatePiker extends StatelessWidget {
               onDateTimeChanged: onDateChanged,
             ),
           )
-        : Container(
+        : SizedBox(
             height: 70,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

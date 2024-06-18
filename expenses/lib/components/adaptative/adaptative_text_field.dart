@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 class AdaptativeTextField extends StatelessWidget {
   final String label;
   final TextEditingController controller;
-  final Function() onSubmitFrom;
+  final Function(String) onSubmitFrom;
   final TextInputType keyboardType;
+
   const AdaptativeTextField({
     super.key,
     required this.label,
@@ -24,7 +25,7 @@ class AdaptativeTextField extends StatelessWidget {
             ),
             child: CupertinoTextField(
               controller: controller,
-              onSubmitted: onSubmitFrom(),
+              onSubmitted: onSubmitFrom,
               keyboardType: keyboardType,
               placeholder: label,
               padding: const EdgeInsets.symmetric(
@@ -36,8 +37,8 @@ class AdaptativeTextField extends StatelessWidget {
         : TextField(
             controller: controller,
             decoration: InputDecoration(labelText: label),
-            onSubmitted: onSubmitFrom(),
             keyboardType: keyboardType,
+            onSubmitted: onSubmitFrom,
           );
   }
 }
